@@ -84,8 +84,8 @@ class GaussianLowPass(FilterAlgorithm):
 
         filtered = gaussian(
             image,
-            sigma=sigma, output=None, cval=0, multichannel=False, preserve_range=True, truncate=4.0
-        )
+            sigma=sigma, output=None, cval=0, channel_axis=None, preserve_range=True, truncate=4.0
+        ) ### DEBUG: replaced "multichannel=False" with "channel_axis=None"
 
         return filtered
 

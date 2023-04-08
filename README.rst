@@ -47,13 +47,20 @@ See `spacetx-starfish.readthedocs.io <https://spacetx-starfish.readthedocs.io/en
 Installation
 ------------
 
-starfish supports python 3.7 and above and can easily be installed from PyPI:
+starfish supports python 3.8 and should be installed in development mode inside a virtual environment:
 
 .. code-block:: bash
 
-    $ pip install starfish[napari]
+    $ mkdir starfish
+    $ cd starfish/
+    $ python3 -m venv starfish_venv
+    $ source starfish_venv/bin/activate
+    $ python3 -m pip install --upgrade pip setuptools wheel
+    $ python3 -m pip install napari[all]
+    $ python3 -m pip install notebook seaborn
+    $ python3 -m pip install git+https://github.com/shachafl/starfish.git
 
-`For more detailed installation instructions, see here <https://spacetx-starfish.readthedocs.io/en/latest/installation/>`_.
+`For detailed installation instructions (currently not updated!), see here <https://spacetx-starfish.readthedocs.io/en/latest/installation/>`_.
 
 Python Version Notice
 ---------------------
