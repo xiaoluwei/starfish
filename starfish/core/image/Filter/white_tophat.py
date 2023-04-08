@@ -76,7 +76,8 @@ class WhiteTophat(FilterAlgorithm):
             structuring_element = ball(self.masking_radius)
         else:
             structuring_element = disk(self.masking_radius)
-        return white_tophat(image, selem=structuring_element)
+        #return white_tophat(image, selem=structuring_element) ### DEBUG: "selem" is depracated in skimage, replace with footprint
+        return white_tophat(image, footprint=structuring_element)
 
     def run(
             self,
