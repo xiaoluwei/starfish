@@ -47,7 +47,7 @@ See `spacetx-starfish.readthedocs.io <https://spacetx-starfish.readthedocs.io/en
 Installation
 ------------
 
-starfish supports python 3.8 and should be installed in development mode inside a virtual environment:
+starfish supports python 3.8 and should be installed from the GitHub repo inside a virtual environment:
 
 .. code-block:: bash
 

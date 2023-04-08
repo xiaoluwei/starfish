@@ -193,7 +193,7 @@ def plot_scaling_result(
 
 f = plot_scaling_result(stack, scaled)
 # EPY: END code
-print("done scaling") ### DEBUG
+
 # EPY: START markdown
 #Find spots
 #----------
@@ -220,7 +220,7 @@ bd = starfish.spots.FindSpots.BlobDetector(
 
 spots = bd.run(scaled)
 # EPY: END code
-print("done find spots") ### DEBUG
+
 # EPY: START markdown
 #Decode spots
 #------------
@@ -241,7 +241,7 @@ decoded = decoder.run(spots=spots)
 
 # EPY: START code
 decode_mask = decoded['target'] != 'nan'
-print("done all") ### DEBUG
+
 # %gui qt
 # viewer = starfish.display(
 #     stack, decoded[decode_mask], radius_multiplier=2, mask_intensities=0.1
