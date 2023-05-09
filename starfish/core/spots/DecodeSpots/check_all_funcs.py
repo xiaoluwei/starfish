@@ -698,7 +698,7 @@ def cleanup(bestPerSpotTables: dict,
                 # keys
                 bestPerSpotTables[r]['spot_codes'] = [tuple(spotCode[0]) for spotCode in spotCodes]
                 bestPerSpotTables[r]['targets'] = [target[0] for target in targets]
-            mergedCodes = mergedCodes.append(bestPerSpotTables[r])
+            mergedCodes = pd.concat([mergedCodes,bestPerSpotTables[r]])
     mergedCodes = mergedCodes.reset_index(drop=True)
 
     # If no codes return empty dataframe

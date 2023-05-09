@@ -391,7 +391,8 @@ class CheckAll(DecodeSpotsAlgorithm):
                                 currentTables = removeUsedSpots(finalCodes, currentTables)
 
                             # Append found codes to allCodes table
-                            allCodes = allCodes.append(finalCodes).reset_index(drop=True)
+                            ## updated pandas 
+                            allCodes = pd.concat([allCodes,finalCodes], ignore_index=True)
 
         # Create and fill in intensity table
         channels = spots.ch_labels
