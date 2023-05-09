@@ -391,7 +391,7 @@ class CheckAll(DecodeSpotsAlgorithm):
                                 currentTables = removeUsedSpots(finalCodes, currentTables)
 
                             # Append found codes to allCodes table
-                            ## updated pandas 
+                            ## updated code for pandas 2.0
                             allCodes = pd.concat([allCodes,finalCodes], ignore_index=True)
 
         # Create and fill in intensity table
